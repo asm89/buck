@@ -1,5 +1,5 @@
 language: java
 script:
     - ./bin/buck build buck --verbose 0
-    - ./bin/buck test src/com/facebook/buck/util/ --verbose 0 --xml results.xml
+    - ./bin/buck test --all --verbose 0 --xml results.xml
     - cat results.xml
