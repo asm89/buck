@@ -1,4 +1,5 @@
 language: java
+sudo: false
 script:
     - ./bin/buck build buck --verbose 0
     - ./bin/buck test --all
