@@ -2,4 +2,4 @@ language: java
 script:
     - ./bin/buck build buck --verbose 0
     - ./bin/buck test --all --verbose 0 --xml results.xml
-    - cat results.xml
+    - cat results.xml | python -c 'import sys;import xml.dom.minidom;s=sys.stdin.read();print xml.dom.minidom.parseString(s).toprettyxml()'
